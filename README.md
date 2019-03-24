@@ -4,6 +4,8 @@
 
 ![](./cc.JPG)
 
+[DEMO](https://lanlou123.github.io/hw05-road-generation/)
+
 ## Features:
 - road generation using pseudo L-system
   - the generation of the Highway and neighborhood are seperated, the Highway is generated with an auto direction detection function: which basically
@@ -21,7 +23,7 @@
 - highway able to cross water while neighborhood can't
   - some threshold applied to neighborhood to stop them from swimming.
 
-## Gui opstions:
+## Gui options:
 
 - mask: selec which background information we need, population density and elevation are included.
 - highwaylength: determines how long highway will travel.
