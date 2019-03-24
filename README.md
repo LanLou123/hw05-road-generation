@@ -1,6 +1,6 @@
 # hw05-road-generation
 
-![](./road.JPG)
+![](./cc.JPG)
 
 ## Features:
 - road generation using pseudo L-system
@@ -11,6 +11,29 @@
   toward directions that exhibits higher population density as they choose their own direction based on this information just as the highways(there are only three directions: right,left,forward), the newly generated will randomly get
   pushed into a turtle stack which will pop turtle in the future when an intesection appears for newly generated edges with older ones. 
 - highway detection for population density area
+  - highway will tend to move toward high density population area and in the meantime stay on the same elevation compared to the elevation it was at from the beginning.
 - neighborhood detection for population and elevation
+  - neighborhood is also sensitive to population and elevation, I used a heuristic and threshold to impose the effects.
 - road snapping when colliding
+  - all road segments will check sourounding area within certain radius and snap the end points to the conjunction if needed.
 - highway able to cross water while neighborhood can't
+  - some threshold applied to neighborhood to stop them from swimming.
+
+## Gui opstions:
+
+- mask: selec which background information we need, population density and elevation are included.
+- highwaylength: determines how long highway will travel.
+- NeiborhoodDensity: determines the density of Neibourhoods.
+  - different neighborhood density:
+  - low:
+  ![](./lowdens.JPG)
+  
+  - mid:
+  ![](./middens.JPG)
+  
+  -high
+  ![](./heighdens.JPG)
+  
+
+## Reference:
+[Procedural Modeling of Cities](proceduralCityGeneration.pdf)
